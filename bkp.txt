@@ -1,0 +1,53 @@
+//
+/*
+ $_GET ['email'];
+ $_GET['senha'];
+*/
+
+//relação de usuarios estática(hardcode) do sistema
+### variavel de autenticação
+$usuarios_autenticado=false;
+$usuarios_app=array(
+    array('email'=>'adm@teste.com.br','senha'=>'123456'),
+    array('email'=>'user@teste.com.br','senha'=>'abcd'),
+    array('email'=>'teste@teste.com.br','senha'=>'teste'),
+);
+
+//echo'<pre>';
+//print_r($usuarios_app);
+//echo'</pre>';
+foreach ($usuarios_app as $user) {
+    echo 'foreach<br/>';
+    # code...
+   /* print_r($user);
+    echo '<br/>';
+*/
+
+    echo 'Usuario app: '.$user['email'] .'/'.$user['senha'];
+    echo '<br/>';
+    echo 'Usuario form: '.$_POST['email'].'/'.;
+
+    if ($user['email']==$_POST['email']&& $user['senha']==$_POST['senha']) {
+       ## echo'teste validacao';
+        # code...
+        $usuarios_autenticado=true;
+    }
+    
+
+
+}
+
+if ($usuarios_autenticado) {
+    echo 'usuario autenticado <br/>';
+    # code...
+}else {
+    echo'erro na autenticacao do usuario';
+}
+####################################
+//$_POST;
+
+//$_POST['email'];
+//$_POST['senha'];
+
+
+*/?>
